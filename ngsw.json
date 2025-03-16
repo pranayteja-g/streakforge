@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1742122270811,
+  "timestamp": 1742144157211,
   "index": "https://pranayteja-g.github.io/streakforge/index.html",
   "assetGroups": [
     {
@@ -13,10 +13,10 @@
       "urls": [
         "https://pranayteja-g.github.io/streakforge/favicon.ico",
         "https://pranayteja-g.github.io/streakforge/index.html",
-        "https://pranayteja-g.github.io/streakforge/main-4FMK7SOB.js",
+        "https://pranayteja-g.github.io/streakforge/main-JBJKN4UN.js",
         "https://pranayteja-g.github.io/streakforge/manifest.webmanifest",
         "https://pranayteja-g.github.io/streakforge/polyfills-FFHMD2TL.js",
-        "https://pranayteja-g.github.io/streakforge/styles-7CPUCM7S.css"
+        "https://pranayteja-g.github.io/streakforge/styles-FUXOZAKK.css"
       ],
       "patterns": []
     },
@@ -51,11 +51,11 @@
     "https://pranayteja-g.github.io/streakforge/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
     "https://pranayteja-g.github.io/streakforge/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
     "https://pranayteja-g.github.io/streakforge/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
-    "https://pranayteja-g.github.io/streakforge/index.html": "c33e07fb5190518e5bdc7a5dbdf25f18cd1dbc6a",
-    "https://pranayteja-g.github.io/streakforge/main-4FMK7SOB.js": "6e24ed1accc746aef9cbebb106d38d07ad5efb8b",
+    "https://pranayteja-g.github.io/streakforge/index.html": "7534bdf000c7f784871ef9d16f4c77de0a9f7a66",
+    "https://pranayteja-g.github.io/streakforge/main-JBJKN4UN.js": "6f2beeb987522c5ca48db24850fb74e0785a2105",
     "https://pranayteja-g.github.io/streakforge/manifest.webmanifest": "e6f3d7d899996386486c33a70e70938240d5c7a1",
     "https://pranayteja-g.github.io/streakforge/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
-    "https://pranayteja-g.github.io/streakforge/styles-7CPUCM7S.css": "65318483a60927b8e316adeb7787bbad84b4f021"
+    "https://pranayteja-g.github.io/streakforge/styles-FUXOZAKK.css": "7c548476b258327a60546839a1056e00a1470305"
   },
   "navigationUrls": [
     {
