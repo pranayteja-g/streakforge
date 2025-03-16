@@ -1,0 +1,18 @@
+<h1>your habits</h1>
+
+<mat-card>
+    <mat-card-content>
+        <mat-list>
+            <button mat-icon-button (click)="refresh()"><mat-icon>refresh</mat-icon></button>
+            <mat-list-item *ngFor="let habit of habits" class="habit-item">
+                <span>{{habit.name}}: {{habit.streak}} days</span>
+                <button mat-icon-button (click)="logActivity(habit.name)">
+                    Log Activity
+                </button>
+                <button mat-icon-button (click)="deleteHabit(habit.name)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </mat-list-item>
+        </mat-list>
+    </mat-card-content>
+</mat-card>

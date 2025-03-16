@@ -1,0 +1,12 @@
+<h1>Add Habit</h1>
+
+<mat-card>
+    <mat-card-content>
+        <mat-form-field appearance="outline" class="full-width">
+            <input matInput #habitInput placeholder="Enter a habit" />
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="addHabit(habitInput.value)">
+            add habit
+        </button>
+    </mat-card-content>
+</mat-card>
