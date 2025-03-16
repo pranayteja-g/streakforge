@@ -1,0 +1,23 @@
+/* Bottom navigation bar */
+.bottom-nav {
+    display: flex;
+    justify-content: space-around; /* Distribute buttons evenly */
+    align-items: center; /* Center buttons vertically */
+    padding: 8px 0; /* Add some padding */
+  }
+  
+  /* Button styling */
+  .bottom-nav button {
+    display: flex;
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center; /* Center icon and text horizontally */
+    justify-content: center; /* Center icon and text vertically */
+    /* color: white; Text color */
+    text-transform: uppercase; /* Uppercase text */
+    font-size: 12px; /* Adjust font size */
+  }
+  
+  /* Icon styling */
+  .bottom-nav mat-icon {
+    margin-bottom: 4px; /* Add space between icon and text */
+  }

@@ -5,8 +5,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import { NavigationComponent } from "../navigation/navigation.component";
-import { RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -16,9 +14,8 @@ import { FormsModule } from '@angular/forms';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule,
-    NavigationComponent
-],
+    MatButtonModule
+  ],
   templateUrl: './add-habit.component.html',
   styleUrl: './add-habit.component.css'
 })

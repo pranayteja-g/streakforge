@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationComponent } from "../navigation/navigation.component";
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HabitService } from '../../services/habit.service';
 import { Habit } from '../../models/habits.model';
 
@@ -15,13 +14,11 @@ import { CommonModule } from '@angular/common';
   selector: 'app-habit-details',
   imports: [
     CommonModule,
-    NavigationComponent,
-    RouterLink,
     MatCardModule,
     MatIconModule,
     MatProgressBarModule,
     MatButtonModule
-  ],
+],
   templateUrl: './habit-details.component.html',
   styleUrl: './habit-details.component.css'
 })

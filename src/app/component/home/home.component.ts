@@ -10,7 +10,6 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 
 import { CommonModule } from '@angular/common';
-import { NavigationComponent } from "../navigation/navigation.component";
 import { Habit } from '../../models/habits.model';
 
 @Component({
@@ -23,9 +22,8 @@ import { Habit } from '../../models/habits.model';
     MatIconModule,
     MatToolbarModule,
     MatProgressBarModule,
-    MatBottomSheetModule,
-    NavigationComponent
-  ],
+    MatBottomSheetModule
+],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
