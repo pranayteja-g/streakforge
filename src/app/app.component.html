@@ -1,9 +1,14 @@
-<div class="app-container">
-  <header>
-      <h1>StreakForge</h1>
-  </header>
+<div class="app-container mat-typography">
+  <!-- Header -->
+  <mat-toolbar color="primary">
+    <span>StreakForge</span>
+  </mat-toolbar>
+
+  <!-- Main Content -->
   <main>
-      <app-home></app-home>
-      <app-add-habit></app-add-habit>
+    <router-outlet></router-outlet>
   </main>
-</div><router-outlet />
+
+  <!-- Bottom Navigation -->
+  <app-navigation></app-navigation>
+</div>

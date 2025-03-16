@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Habit } from '../models/habits.model';
 
 @Injectable({
   providedIn: 'root'
@@ -14,24 +15,32 @@ export class HabitService {
     return habits ? JSON.parse(habits) : [];
   }
 
-  // add new habit
-  addHabit(habit: any) {
+  // Add new habit
+  addHabit(name: string, goal: number) {
     const habits = this.getHabits();
-    habits.push({ name: habit, streak: 0 });
+    // ✅ Ensure unique IDs by using max ID + 1
+    const newId = habits.length > 0 ? Math.max(...habits.map((h: Habit) => h.id)) + 1 : 1;
+    const newHabit: Habit = {
+      id: newId, // Simple unique ID
+      name,
+      streak: 0,
+      goal,
+      createdDate: new Date()
+    };
+    habits.push(newHabit);
     localStorage.setItem(this.STORAGE_KEY, JSON.stringify(habits));
   }
 
-  // delete habit
-  deleteHabit(habitName: string) {
-    const habits = this.getHabits();
-    const updatedHabits = habits.filter((h: any) => h.name !== habitName);
-    localStorage.setItem(this.STORAGE_KEY, JSON.stringify(updatedHabits));
+  // Delete habit
+  deleteHabit(habitId: number) {
+    const habits: Habit[] = this.getHabits().filter((h: Habit) => h.id !== habitId);
+    localStorage.setItem(this.STORAGE_KEY, JSON.stringify(habits));
   }
 
-  // log an activity for a habit
-  logActivity(habitName: string) {
+  // Log an activity for a habit
+  logActivity(habitId: number) {
     const habits = this.getHabits();
-    const habit = habits.find((h: any) => h.name === habitName);
+    const habit = habits.find((h: Habit) => h.id === habitId);
     if (habit) {
       habit.streak++;
       localStorage.setItem(this.STORAGE_KEY, JSON.stringify(habits));

@@ -1,6 +1,28 @@
-.habit-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 0;
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+}
+
+.habit-card {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 16px;
+}
+
+.streak-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* Fallback message when no habits are found */
+.no-habits-message {
+  text-align: center;
+  color: #757575; /* Grey color for the message */
+  font-size: 1.2em;
+  margin-top: 20px;
 }

@@ -1,0 +1,29 @@
+<div class="habit-details-container">
+    <h1>Habit Details</h1>
+
+    <mat-card *ngIf="habit">
+        <mat-card-header>
+            <mat-card-title>
+                <mat-icon>emoji_events</mat-icon> {{ habit.name }}
+            </mat-card-title>
+            <mat-card-subtitle>
+                Streak: {{ habit.streak }} / {{ habit.goal }}
+            </mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+            <!-- Progress Bar -->
+            <mat-progress-bar mode="determinate" [value]="((habit.streak / habit.goal) * 100)">
+            </mat-progress-bar>
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button mat-raised-button color="primary" (click)="logActivity()">
+                Log Activity
+            </button>
+            <button mat-button color="warn" (click)="deleteHabit(habit.id)">
+                delete
+            </button>
+        </mat-card-actions>
+    </mat-card>
+</div>
