@@ -1,7 +1,7 @@
 <div class="habit-details-container">
     <h1>Habit Details</h1>
 
-    <mat-card *ngIf="habit">
+    <mat-card *ngIf="habit; else loading">
         <mat-card-header>
             <mat-card-title>
                 <mat-icon>emoji_events</mat-icon> {{ habit.name }}
@@ -22,8 +22,12 @@
                 Log Activity
             </button>
             <button mat-button color="warn" (click)="deleteHabit(habit.id)">
-                delete
+                Delete
             </button>
         </mat-card-actions>
     </mat-card>
+
+    <ng-template #loading>
+        <p>Loading habit details...</p>
+    </ng-template>
 </div>

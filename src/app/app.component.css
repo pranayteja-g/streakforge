@@ -1,0 +1,23 @@
+/* App container */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the container takes up the full viewport height */
+  }
+  
+  /* Header */
+  mat-toolbar {
+    position: fixed; /* Fix the toolbar to the top of the screen */
+    top: 0; /* Stick to the top */
+    left: 0; /* Align to the left edge */
+    right: 0; /* Align to the right edge */
+    z-index: 1000; /* Ensure it stays above other content */
+    justify-content: center;
+  }
+  
+  /* Main content */
+  main {
+    flex: 1; /* Allow the main content to take up the remaining space */
+    padding-top: 64px; /* Add padding to account for the fixed header */
+    padding-bottom: 56px; /* Add padding to account for the fixed bottom navigation */
+  }

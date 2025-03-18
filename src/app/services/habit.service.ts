@@ -37,13 +37,21 @@ export class HabitService {
     localStorage.setItem(this.STORAGE_KEY, JSON.stringify(habits));
   }
 
-  // Log an activity for a habit
-  logActivity(habitId: number) {
+  // Log an activity for a habitn 
+  logActivity(habitId: number): boolean {
     const habits = this.getHabits();
     const habit = habits.find((h: Habit) => h.id === habitId);
-    if (habit) {
-      habit.streak++;
-      localStorage.setItem(this.STORAGE_KEY, JSON.stringify(habits));
+
+    if (!habit) {
+      throw new Error('Habit not found');
     }
+
+    if (habit.streak >= habit.goal) {
+      return false; // Goal already reached
+    }
+
+    habit.streak++;
+    localStorage.setItem(this.STORAGE_KEY, JSON.stringify(habits));
+    return true; // Activity logged successfully
   }
 }
