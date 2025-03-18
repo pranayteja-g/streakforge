@@ -1,18 +1,36 @@
 /* Title Styling */
 h2 {
-  color: #1976d2; /* Consistent with navigation theme */
+  color: #1976d2;
+  /* Consistent with navigation theme */
   font-size: 1.75rem;
   font-weight: 600;
   margin-bottom: 16px;
   text-align: center;
 }
 
-/* Container Layout */
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Habit List Container - Grid Layout */
+.habit-list {
+  display: grid;
+  gap: 16px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
   padding: 16px;
+}
+
+/* Responsive Grid */
+@media (min-width: 600px) {
+  .habit-list {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Dynamic grid */
+  }
+}
+
+@media (max-width: 599px) {
+  .habit-list {
+    grid-template-columns: 1fr;
+    /* Single column for mobile */
+  }
 }
 
 /* Habit Card Styling */
@@ -20,12 +38,6 @@ h2 {
   width: 100%;
   max-width: 400px;
   margin-bottom: 16px;
-}
-
-/* Progress Bar Styling */
-mat-progress-bar {
-  height: 6px;
-  border-radius: 4px;
 }
 
 /* Clickable Card */
@@ -36,7 +48,14 @@ mat-progress-bar {
 
 .clickable-card:hover {
   background: rgba(25, 118, 210, 0.1);
-  transform: scale(1.02); /* Slight pop effect on hover */
+  transform: scale(1.02);
+  /* Slight pop effect on hover */
+}
+
+/* Progress Bar Styling */
+mat-progress-bar {
+  height: 6px;
+  border-radius: 4px;
 }
 
 /* Fallback message when no habits are found */
@@ -45,9 +64,11 @@ mat-progress-bar {
   color: #757575;
   font-size: 1.2rem;
   font-weight: 500;
-  margin-top: 24px;
   background: rgba(25, 118, 210, 0.1);
   padding: 12px;
   border-radius: 8px;
   width: 80%;
+  max-width: 400px;
+  margin: 24px auto;
+  /* Centers horizontally */
 }

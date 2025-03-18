@@ -2,7 +2,7 @@
   <h2>Your Habits</h2>
 
   <!-- Habit List -->
-  <div *ngIf="habits && habits.length > 0; else noHabits">
+  <div *ngIf="habits && habits.length > 0; else noHabits" class="habit-list">
     <mat-card *ngFor="let habit of habits" class="habit-card clickable-card" [routerLink]="'/habit/' + habit.id">
       <mat-card-header>
         <mat-card-title>

@@ -1,54 +1,21 @@
-/* Center the app and give it a mobile-like size */
+/* Ensure the app container expands naturally */
 .app-container {
-  width: 375px;
-  /* Typical mobile width */
-  height: 812px;
-  /* Typical mobile height */
-  max-width: 100%;
-  max-height: 100vh;
+  width: 100%;
+  max-width: 1200px; /* Limit max width for better readability */
+  min-height: 100vh; /* Ensure it fills the screen */
   display: flex;
   flex-direction: column;
-  border-radius: 20px;
-  /* Rounded edges like a phone */
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  /* Subtle shadow for depth */
   background: #f5f5f5;
-  position: relative;
+  position: relative; /* Key change: relative positioning */
+  margin: 0 auto; /* Center it on larger screens */
 }
 
-/* Center the app on larger screens */
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background: #e0e0e0;
-  /* Light gray background */
-}
-
-/* Header (Fixed inside app-container)
-mat-toolbar {
-  height: 56px;
-  font-size: 1.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #1976d2;
-  color: white;
-  z-index: 1000;
-} */
-
-/* Main Content */
+/* Ensure main content takes available space */
 main {
-  flex: 1;
+  flex: 1; /* Makes sure it stretches */
   overflow-y: auto;
-  /* Allow scrolling inside the mobile-sized app */
   padding: 16px;
-  /* Prevent content from hiding under the toolbar */
-  margin-bottom: 64px;
-  /* Prevent overlap with bottom navigation */
+  margin-bottom: 64px; /* Space for bottom navigation */
 }
 
 /* Bottom Navigation */
@@ -57,23 +24,18 @@ main {
   justify-content: space-between;
   align-items: center;
   background: #1976d2;
-  /* Material Design blue */
-  padding: 0.5rem 0;
   box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
   width: 100%;
   height: 64px;
-  position: absolute;
-  /* Keeps it inside .app-container */
+  padding-bottom: 10px;
+  position: absolute; /* Key change: Keeps it within .app-container */
   bottom: 0;
   left: 0;
-  padding-bottom: env(safe-area-inset-bottom, 16px);
-  /* Ensures space for system navigation buttons */
 }
 
 /* Bottom Navigation Buttons */
 .bottom-nav button {
   flex: 1;
-  /* Make buttons take equal space */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,17 +52,10 @@ main {
 
 .bottom-nav button:hover {
   background: rgba(255, 255, 255, 0.1);
-  /* Subtle hover effect */
 }
 
 .bottom-nav button:active {
   background: rgba(255, 255, 255, 0.2);
-}
-
-/* Highlight active button */
-.bottom-nav button.active {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
 }
 
 /* Ensure icons are properly aligned */
