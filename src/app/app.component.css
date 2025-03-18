@@ -1,23 +1,111 @@
-/* App container */
+/* Center the app and give it a mobile-like size */
 .app-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensure the container takes up the full viewport height */
-  }
-  
-  /* Header */
-  mat-toolbar {
-    position: fixed; /* Fix the toolbar to the top of the screen */
-    top: 0; /* Stick to the top */
-    left: 0; /* Align to the left edge */
-    right: 0; /* Align to the right edge */
-    z-index: 1000; /* Ensure it stays above other content */
-    justify-content: center;
-  }
-  
-  /* Main content */
-  main {
-    flex: 1; /* Allow the main content to take up the remaining space */
-    padding-top: 64px; /* Add padding to account for the fixed header */
-    padding-bottom: 56px; /* Add padding to account for the fixed bottom navigation */
-  }
+  width: 375px;
+  /* Typical mobile width */
+  height: 812px;
+  /* Typical mobile height */
+  max-width: 100%;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  /* Rounded edges like a phone */
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  /* Subtle shadow for depth */
+  background: #f5f5f5;
+  position: relative;
+}
+
+/* Center the app on larger screens */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #e0e0e0;
+  /* Light gray background */
+}
+
+/* Header (Fixed inside app-container)
+mat-toolbar {
+  height: 56px;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1976d2;
+  color: white;
+  z-index: 1000;
+} */
+
+/* Main Content */
+main {
+  flex: 1;
+  overflow-y: auto;
+  /* Allow scrolling inside the mobile-sized app */
+  padding: 16px;
+  /* Prevent content from hiding under the toolbar */
+  margin-bottom: 64px;
+  /* Prevent overlap with bottom navigation */
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1976d2;
+  /* Material Design blue */
+  padding: 0.5rem 0;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 64px;
+  position: absolute;
+  /* Keeps it inside .app-container */
+  bottom: 0;
+  left: 0;
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+  /* Ensures space for system navigation buttons */
+}
+
+/* Bottom Navigation Buttons */
+.bottom-nav button {
+  flex: 1;
+  /* Make buttons take equal space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  font-size: 14px;
+  color: white;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  padding: 8px 0;
+  transition: background 0.2s ease-in-out;
+}
+
+.bottom-nav button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  /* Subtle hover effect */
+}
+
+.bottom-nav button:active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Highlight active button */
+.bottom-nav button.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+
+/* Ensure icons are properly aligned */
+.bottom-nav mat-icon {
+  font-size: 24px;
+  margin-bottom: 4px;
+  color: white;
+}
