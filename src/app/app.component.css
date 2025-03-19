@@ -1,36 +1,30 @@
-/* Ensure the app container expands naturally */
-.app-container {
+.nav-container {
+  position: fixed;
+  bottom: 0;
+  height: 64px;
+  left: 0;
   width: 100%;
-  max-width: 1200px; /* Limit max width for better readability */
-  min-height: 100vh; /* Ensure it fills the screen */
-  display: flex;
-  flex-direction: column;
-  background: #f5f5f5;
-  position: relative; /* Key change: relative positioning */
-  margin: 0 auto; /* Center it on larger screens */
+  z-index: 1000;
+  background: white;
 }
 
-/* Ensure main content takes available space */
-main {
-  flex: 1; /* Makes sure it stretches */
-  overflow-y: auto;
-  padding: 16px;
-  margin-bottom: 64px; /* Space for bottom navigation */
-}
-
-/* Bottom Navigation */
+/* Bottom Navigation - Mobile App Style */
 .bottom-nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background: #1976d2;
-  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
-  width: 100%;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  /* Slightly smaller than full width */
   height: 64px;
-  padding-bottom: 10px;
-  position: absolute; /* Key change: Keeps it within .app-container */
-  bottom: 0;
-  left: 0;
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 16px;
+  /* Soft rounded edges */
+  padding: 8px 0;
 }
 
 /* Bottom Navigation Buttons */
@@ -41,26 +35,40 @@ main {
   align-items: center;
   justify-content: center;
   text-transform: capitalize;
-  font-size: 14px;
+  font-size: 12px;
+  /* Slightly smaller text */
   color: white;
   font-weight: 500;
   background: transparent;
   border: none;
   padding: 8px 0;
-  transition: background 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: relative;
 }
 
+/* Active Button Highlight */
+.bottom-nav button.active {
+  color: #ffeb3b;
+  /* Highlight active button */
+}
+
+.bottom-nav button.active::after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 3px;
+  bottom: -4px;
+  left: 30%;
+  background: #ffeb3b;
+  border-radius: 2px;
+}
+
+/* Hover & Click Effects */
 .bottom-nav button:hover {
-  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  opacity: 0.9;
 }
 
 .bottom-nav button:active {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-/* Ensure icons are properly aligned */
-.bottom-nav mat-icon {
-  font-size: 24px;
-  margin-bottom: 4px;
-  color: white;
+  transform: scale(0.95);
 }

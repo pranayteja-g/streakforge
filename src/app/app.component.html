@@ -1,11 +1,13 @@
-<body>
-  <div class="app-container mat-typography">
+<div class="app-container mat-typography">
+  <div class="content-container">
     <!-- Main Content -->
     <main>
       <router-outlet></router-outlet>
     </main>
+  </div>
 
-    <!-- Bottom Navigation -->
+  <!-- Bottom Navigation -->
+  <div class="nav-container">
     <mat-toolbar color="primary" class="bottom-nav">
       <button mat-button routerLink="/stats" routerLinkActive="active">
         <mat-icon>bar_chart</mat-icon>
@@ -21,4 +23,4 @@
       </button>
     </mat-toolbar>
   </div>
-</body>
+</div>
