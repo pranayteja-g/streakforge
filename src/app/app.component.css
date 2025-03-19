@@ -5,7 +5,8 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: white;
+  background: #1976d2;
+  ;
 }
 
 /* Bottom Navigation - Mobile App Style */
@@ -22,7 +23,6 @@
   bottom: 16px;
   left: 50%;
   transform: translateX(-50%);
-  border-radius: 16px;
   /* Soft rounded edges */
   padding: 8px 0;
 }
