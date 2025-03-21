@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1742569601960,
+  "timestamp": 1742570867828,
   "index": "https://pranayteja-g.github.io/streakforge/index.html",
   "assetGroups": [
     {
@@ -57,7 +57,7 @@
     "https://pranayteja-g.github.io/streakforge/icons/icon-96x96.png": "3c605eb6e716cd8be547233cbc3471c447875ca1",
     "https://pranayteja-g.github.io/streakforge/index.html": "eb7f80cbead3f2eda46065d261c1c25cb67f2542",
     "https://pranayteja-g.github.io/streakforge/main-UFVTPPMP.js": "3221f8e1f5bc12ba1eacc398db419ee253c447b1",
-    "https://pranayteja-g.github.io/streakforge/manifest.webmanifest": "ecdacd84b41752ac1bdac58cfefa87f975bffeb0",
+    "https://pranayteja-g.github.io/streakforge/manifest.webmanifest": "cdfe814ad7de8c5e2738eb3d9cdc282918e81c8c",
     "https://pranayteja-g.github.io/streakforge/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
     "https://pranayteja-g.github.io/streakforge/styles-FUXOZAKK.css": "7c548476b258327a60546839a1056e00a1470305"
   },
