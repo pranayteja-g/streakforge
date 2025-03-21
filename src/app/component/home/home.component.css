@@ -34,6 +34,8 @@ h2 {
 
 /* Adjust main content to avoid overlap */
 .home-container {
+  position: relative;
+  min-height: 100vh;
   padding-top: 60px;
   /* Adjust based on title height */
   display: flex;
@@ -62,7 +64,6 @@ mat-progress-bar {
 
 /* Fallback message when no habits are found */
 .no-habits-message {
-  text-align: center;
   color: #757575;
   font-size: 1.2rem;
   font-weight: 500;
@@ -71,6 +72,11 @@ mat-progress-bar {
   border-radius: 8px;
   width: 80%;
   max-width: 400px;
-  margin: 24px auto;
-  /* Centers horizontally */
+  text-align: center;
+
+  /* Centering */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
