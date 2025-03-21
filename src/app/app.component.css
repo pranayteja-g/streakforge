@@ -1,23 +1,74 @@
-/* App container */
-.app-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensure the container takes up the full viewport height */
-  }
-  
-  /* Header */
-  mat-toolbar {
-    position: fixed; /* Fix the toolbar to the top of the screen */
-    top: 0; /* Stick to the top */
-    left: 0; /* Align to the left edge */
-    right: 0; /* Align to the right edge */
-    z-index: 1000; /* Ensure it stays above other content */
-    justify-content: center;
-  }
-  
-  /* Main content */
-  main {
-    flex: 1; /* Allow the main content to take up the remaining space */
-    padding-top: 64px; /* Add padding to account for the fixed header */
-    padding-bottom: 56px; /* Add padding to account for the fixed bottom navigation */
-  }
+.nav-container {
+  position: fixed;
+  bottom: 0;
+  height: 64px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #1976d2;
+  ;
+}
+
+/* Bottom Navigation - Mobile App Style */
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #1976d2;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  /* Slightly smaller than full width */
+  height: 64px;
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* Soft rounded edges */
+  padding: 8px 0;
+}
+
+/* Bottom Navigation Buttons */
+.bottom-nav button {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  font-size: 12px;
+  /* Slightly smaller text */
+  color: white;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  padding: 8px 0;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Active Button Highlight */
+.bottom-nav button.active {
+  color: #ffeb3b;
+  /* Highlight active button */
+}
+
+.bottom-nav button.active::after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 3px;
+  bottom: -4px;
+  left: 30%;
+  background: #ffeb3b;
+  border-radius: 2px;
+}
+
+/* Hover & Click Effects */
+.bottom-nav button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.bottom-nav button:active {
+  transform: scale(0.95);
+}

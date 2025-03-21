@@ -1,24 +1,24 @@
 <div class="add-habit-container">
-    <h1>Add a New Habit</h1>
-  
-    <mat-card>
-      <mat-card-content>
-        <!-- Habit Name -->
-        <mat-form-field appearance="outline" class="full-width">
-          <mat-label>Habit Name</mat-label>
-          <input matInput [(ngModel)]="habitName" placeholder="Enter habit name" required />
-        </mat-form-field>
-  
-        <!-- Goal -->
-        <mat-form-field appearance="outline" class="full-width">
-          <mat-label>Goal</mat-label>
-          <input matInput type="number" [(ngModel)]="habitGoal" placeholder="Enter goal" min="1" required />
-        </mat-form-field>
-  
-        <!-- Add Habit Button -->
-        <button mat-raised-button color="primary" (click)="addHabit()" class="full-width">
-          Add Habit
-        </button>
-      </mat-card-content>
-    </mat-card>
-  </div>
+  <h1>Add a New Habit</h1>
+
+  <mat-card>
+    <mat-card-content>
+      <!-- Habit Name -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Habit Name</mat-label>
+        <input matInput [(ngModel)]="habitName" placeholder="Enter habit name" required />
+      </mat-form-field>
+
+      <!-- Goal -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Goal</mat-label>
+        <input matInput type="number" [(ngModel)]="habitGoal" placeholder="Enter goal" min="1" required />
+      </mat-form-field>
+
+      <!-- Add Habit Button -->
+      <button mat-raised-button color="primary" (click)="addHabit()" class="full-width">
+        Add Habit
+      </button>
+    </mat-card-content>
+  </mat-card>
+</div>
