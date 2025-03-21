@@ -1,3 +1,30 @@
+/* Root Layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Prevent whole page scrolling */
+}
+
+/* Title/Header (If Present) */
+.header {
+  height: 56px; /* Adjust if you have a title */
+  flex-shrink: 0; /* Prevent shrinking */
+  background: white; /* Ensure it's visible */
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Content Container - Takes Remaining Space */
+.content-container {
+  flex: 1; /* Takes all remaining space */
+  overflow-y: auto; /* Enables scrolling within this section */
+  padding: 16px; /* Prevent content from touching edges */
+}
+
 .nav-container {
   position: fixed;
   bottom: 0;
@@ -6,7 +33,6 @@
   width: 100%;
   z-index: 1000;
   background: #1976d2;
-  ;
 }
 
 /* Bottom Navigation - Mobile App Style */
