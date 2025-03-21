@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1742567372243,
+  "timestamp": 1742569601960,
   "index": "https://pranayteja-g.github.io/streakforge/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "https://pranayteja-g.github.io/streakforge/favicon.ico",
         "https://pranayteja-g.github.io/streakforge/index.html",
-        "https://pranayteja-g.github.io/streakforge/main-6AK76YHB.js",
+        "https://pranayteja-g.github.io/streakforge/main-UFVTPPMP.js",
         "https://pranayteja-g.github.io/streakforge/manifest.webmanifest",
         "https://pranayteja-g.github.io/streakforge/polyfills-FFHMD2TL.js",
         "https://pranayteja-g.github.io/streakforge/styles-FUXOZAKK.css"
@@ -46,7 +46,7 @@
   "hashTable": {
     "https://pranayteja-g.github.io/streakforge/favicon.ico": "0e52a06ecd777f2ff3256cdc1cfed81ac14617d3",
     "https://pranayteja-g.github.io/streakforge/icons/apple-touch-icon.png": "98371b5bf0e364259cd7f2f7ccc4cf7d16e891b9",
-    "https://pranayteja-g.github.io/streakforge/icons/favicon.svg": "ab00dedbf4b24edbc39c7cc3fe779c505c44256a",
+    "https://pranayteja-g.github.io/streakforge/icons/favicon.svg": "ebfab4f1b2ed463f365f64d2ed62a4b8e80fc1c8",
     "https://pranayteja-g.github.io/streakforge/icons/icon-128x128.png": "91dfeac73c876219419c534d5c956a4389be2d8b",
     "https://pranayteja-g.github.io/streakforge/icons/icon-144x144.png": "1bfeeac962f29701a386eedaa01671625d842707",
     "https://pranayteja-g.github.io/streakforge/icons/icon-152x152.png": "b60c8e31d7cf65e73e144a0acce86872a90442d5",
@@ -55,9 +55,9 @@
     "https://pranayteja-g.github.io/streakforge/icons/icon-512x512.png": "675de9d24cfdd412228ddf2c11943f8d7eb24411",
     "https://pranayteja-g.github.io/streakforge/icons/icon-72x72.png": "e30f1dbe84d68a4655a4025f5f593852fcc6052f",
     "https://pranayteja-g.github.io/streakforge/icons/icon-96x96.png": "3c605eb6e716cd8be547233cbc3471c447875ca1",
-    "https://pranayteja-g.github.io/streakforge/index.html": "34decf2bf5f9cf5bf88b251cd984dd9b8e152ae3",
-    "https://pranayteja-g.github.io/streakforge/main-6AK76YHB.js": "e6a3c16b261a51c2bf6587326e7771127d85f0f0",
-    "https://pranayteja-g.github.io/streakforge/manifest.webmanifest": "dc629029bcbf17d5528a8d9a8efc920e185ddab9",
+    "https://pranayteja-g.github.io/streakforge/index.html": "eb7f80cbead3f2eda46065d261c1c25cb67f2542",
+    "https://pranayteja-g.github.io/streakforge/main-UFVTPPMP.js": "3221f8e1f5bc12ba1eacc398db419ee253c447b1",
+    "https://pranayteja-g.github.io/streakforge/manifest.webmanifest": "ecdacd84b41752ac1bdac58cfefa87f975bffeb0",
     "https://pranayteja-g.github.io/streakforge/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
     "https://pranayteja-g.github.io/streakforge/styles-FUXOZAKK.css": "7c548476b258327a60546839a1056e00a1470305"
   },
